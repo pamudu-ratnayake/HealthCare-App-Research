@@ -42,7 +42,7 @@ const NailIdentification = () => {
     });
 
     axios
-      .post(`http://192.168.1.4:8000/disease`, formData, {
+      .post(`http://192.168.43.242:8000/disease`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -91,7 +91,7 @@ const NailIdentification = () => {
             {!image && (
               <Button
               flex={1}
-              gradient={gradients.secondary}
+              gradient={gradients.success}
               marginBottom={sizes.base}
               onPress={pickImage}>
               <Text white bold transform="uppercase">
@@ -103,7 +103,7 @@ const NailIdentification = () => {
               <Block row>
                 <Button
                   flex={1}
-                  gradient={gradients.secondary}
+                  gradient={gradients.danger}
                   marginBottom={sizes.base}
                   onPress={cancelBtn}
                   style={{marginRight: 10}}>
@@ -113,7 +113,7 @@ const NailIdentification = () => {
                 </Button>
                 <Button
                   flex={1}
-                  gradient={gradients.secondary}
+                  gradient={gradients.success}
                   marginBottom={sizes.base}
                   onPress={predictDisease}>
                   <Text white bold transform="uppercase">

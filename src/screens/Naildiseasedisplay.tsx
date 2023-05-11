@@ -4,6 +4,7 @@ import {useNavigation} from '@react-navigation/core';
 
 import {useData, useTheme} from '../hooks/';
 import {Block, Button, Input, Image, Switch, Modal, Text} from '../components/';
+import bg2 from '../assets/images/bg2.jpg'
 
 const Naildiseasedisplay = ({route}) => {
   const navigation = useNavigation();
@@ -16,11 +17,11 @@ const Naildiseasedisplay = ({route}) => {
       const {data} = route.params;
       const parsedData = JSON.parse(data);
       setDiseaseData(parsedData);
+      console.log('params are =========>', parsedData);
       // setDiseaseSteps();
     };
     initData();
   }, []);
-  console.log('params are =========>', diseaseData);
 
   return (
     <Block marginTop={sizes.m} paddingHorizontal={sizes.padding}>
@@ -32,7 +33,7 @@ const Naildiseasedisplay = ({route}) => {
           <Image
             background
             resizeMode="cover"
-            source={assets.card5}
+            source={bg2}
             radius={sizes.cardRadius}
             style={{
               width: '100%',
@@ -44,13 +45,17 @@ const Naildiseasedisplay = ({route}) => {
                 {diseaseData && diseaseData.disease}
               </Text>
               <ScrollView>
-                <Text p white>
+                <Text p black>
                   {diseaseData && diseaseData.description}
                 </Text>
-                {diseaseData &&
+                {diseaseData.steps &&
                   diseaseData.steps.map((step, index) => (
-                    <Text key={index} p white>
-                      {index}. {step}
+                    <Text key={index} p black style={{
+                      marginLeft: 20,
+                      marginBottom: 10,
+                      marginTop: 10
+                    }}>
+                      {index + 1}. {step}
                     </Text>
                   ))}
               </ScrollView>
