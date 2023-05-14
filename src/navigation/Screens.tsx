@@ -1,7 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {Articles, Components, Home, Profile, Register, Pro} from '../screens';
+import {Articles, Components, Home, Profile, Register, Pro, NailIdentification, Naildiseasedisplay} from '../screens';
 import {useScreenOptions, useTranslation} from '../hooks';
 
 const Stack = createStackNavigator();
@@ -28,6 +28,17 @@ export default () => {
         name="Articles"
         component={Articles}
         options={{title: t('navigation.articles')}}
+      />
+      
+      <Stack.Screen
+        name="Nailidentification"
+        component={NailIdentification}
+        options={{title: t('navigation.nailidentification')}}
+      />
+      <Stack.Screen
+        name="naildiseasedisplay"
+        component={Naildiseasedisplay}
+        options={{title: t('navigation.naildiseasedisplay')}}
       />
 
       <Stack.Screen name="Pro" component={Pro} options={screenOptions.pro} />

@@ -83,6 +83,7 @@ export const ASSETS: ThemeAssets = {
   background: require('../assets/images/background.png'),
   ios: require('../assets/images/ios.png'),
   android: require('../assets/images/android.png'),
+  // uploadPhoto: require('../assets/images/uploadPhoto.jpg'),
 
   // cards
   card1: require('../assets/images/card1.png'),
