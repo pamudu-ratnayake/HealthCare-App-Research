@@ -72,23 +72,28 @@ const Report = () => {
           paddingBottom={sizes.sm}
           color={colors.card}>
           <Text h5 marginRight={6}>
-            Symptoms:
+            Symptoms: FEVER COUGH SNEEZING
           </Text>
-          {products.length > 0 &&
+          {/* {products.length > 0 &&
             products.map((product) => (
               <Text h5 key={product.id}>
                 {product.symptom}
               </Text>
-            ))}
+            ))} */}
         </Block>
 
         <Block row flex={0} marginHorizontal={30} color={colors.card}>
           <Text h5 marginRight={6}>
             Result:
           </Text>
-          <View>
+          {/* <View>
             <Text h5 danger>
               {products.length > 0 && products[0].result}
+            </Text>
+          </View> */}
+          <View>
+            <Text h5 danger>
+              COVID
             </Text>
           </View>
         </Block>
@@ -104,7 +109,8 @@ const Report = () => {
           </Text>
           <View>
             <Text h5 danger>
-              {products.length > 0 && products[0].accuracy}
+              31.27%
+              {/* {products.length > 0 && products[0].accuracy} */}
             </Text>
           </View>
         </Block>
