@@ -3,6 +3,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import {Articles, Components, Home, Profile, Register, Pro, NailIdentification, Naildiseasedisplay} from '../screens';
 import {useScreenOptions, useTranslation} from '../hooks';
+import AcnePrediction from '../screens/AcnePrediction';
+import PredictionResult from '../screens/PredictionResult';
 
 const Stack = createStackNavigator();
 
@@ -52,6 +54,18 @@ export default () => {
       <Stack.Screen
         name="Register"
         component={Register}
+        options={{headerShown: false}}
+      />
+      
+      <Stack.Screen
+        name="AcnePrediction"
+        component={AcnePrediction}
+        options={{headerShown: true}}
+      />
+
+      <Stack.Screen
+        name="PredictionResult"
+        component={PredictionResult}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

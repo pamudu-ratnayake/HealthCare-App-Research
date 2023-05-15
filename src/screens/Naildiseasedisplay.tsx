@@ -8,7 +8,7 @@ import bg2 from '../assets/images/bg2.jpg'
 
 const Naildiseasedisplay = ({route}) => {
   const navigation = useNavigation();
-  const {assets, colors, gradients, sizes} = useTheme();
+  const {sizes} = useTheme();
   const [diseaseData, setDiseaseData] = useState({});
   const [diseaseSteps, setDiseaseSteps] = useState([]);
 

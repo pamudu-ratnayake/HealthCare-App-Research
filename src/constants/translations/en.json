@@ -64,7 +64,8 @@
     "profile": "Profile",
     "settings": "Settings",
     "register": "Create account",
-    "extra": "Extra - Automotive"
+    "extra": "Extra - Automotive",
+    "acne_prediction": "Acne Prediction"
   },
   "navigation": {
     "home": "Soft UI",
@@ -98,6 +99,10 @@
   },
   "register": {
     "title": "Welcome",
+    "subtitle": "Register with"
+  },
+  "acne_prediction": {
+    "title": "Acne Prediction",
     "subtitle": "Register with"
   },
   "profile": {
