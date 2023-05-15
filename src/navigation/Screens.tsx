@@ -5,6 +5,9 @@ import {Articles, Components, Home, Profile, Register, Pro, NailIdentification, 
 import {useScreenOptions, useTranslation} from '../hooks';
 import AcnePrediction from '../screens/AcnePrediction';
 import PredictionResult from '../screens/PredictionResult';
+import DiseasePrediction from '../screens/DiseasePrediction';
+import Update from '../screens/Update';
+import Report from '../screens/Report';
 
 const Stack = createStackNavigator();
 
@@ -37,6 +40,12 @@ export default () => {
         component={NailIdentification}
         options={{title: t('navigation.nailidentification')}}
       />
+
+      <Stack.Screen
+        name="Diseaseprediction"
+        component={DiseasePrediction}
+        options={{title: t('navigation.diseaseprediction')}}
+      />
       <Stack.Screen
         name="naildiseasedisplay"
         component={Naildiseasedisplay}
@@ -56,6 +65,9 @@ export default () => {
         component={Register}
         options={{headerShown: false}}
       />
+      <Stack.Screen name="Report" component={Report} />
+      
+      <Stack.Screen name="Update" component={Update} />
       
       <Stack.Screen
         name="AcnePrediction"
