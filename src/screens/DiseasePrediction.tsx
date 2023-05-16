@@ -1,62 +1,56 @@
 import React, {useCallback, useEffect, useState} from 'react';
+import {useNavigation} from '@react-navigation/native';
+import Voice from '@react-native-voice/voice';
 import {
   Alert,
   View,
   TextInput,
   TouchableOpacity,
   ScrollView,
+  FlatList,
 } from 'react-native';
-import * as ImagePicker from 'expo-image-picker';
-import Voice from '@react-native-voice/voice';
-import {useData, useTheme, useTranslation} from '../hooks';
-import {Block, Button, Input, Image, Switch, Modal, Text} from '../components';
-import {useNavigation} from '@react-navigation/core';
+import {useData, useTheme, useTranslation} from '../hooks/';
+import axios from 'axios';
 import {
   dlManelToUnicode,
   singlishToUnicode,
   unicodeToDlManel,
 } from 'sinhala-unicode-coverter';
-
-import uploadPhoto from '../assets/images/uploadPhoto.jpg';
+import {Block, Switch, Image, Text} from '../components/';
 
 const DiseasePrediction = () => {
   const {t} = useTranslation();
   const [isDark, setIsDark] = useState(false);
-  const [recognizedText, setRecognizedText] = useState<any>('');
+  const [recognizedText, setRecognizedText] = useState('');
   const [isRecording, setIsRecording] = useState(false);
   const {colors, assets, sizes} = useTheme();
   const {handleIsDark} = useData();
   const navigation = useNavigation();
-  const [symptoms, setSymptoms] = useState('');
+  const [symptoms, setSymptoms] = useState<any>('');
   const [tags, setTags] = useState<any>([]);
 
   const apiEndpoint = 'https://backend-ap.herokuapp.com/app/text';
 
   const fetchSynonyms = async () => {
-    try {
-      const response = await fetch(apiEndpoint);
-      if (response.ok) {
-        const data = await response.json();
-        return data;
-      } else {
-        throw new Error('Error retrieving synonyms from API');
-      }
-    } catch (error) {
-      console.error(error);
-      throw error;
-    }
+    console.log('text', symptoms);
+    const response = await axios
+      .post(apiEndpoint, {
+        text: symptoms,
+        isSinhala: isDark,
+      })
+      .then((response) => {
+        console.log(response.data);
+        setTags(response.data.symptoms);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const onSaveButtonPressed = async () => {
-    try {
-      const synonyms = await fetchSynonyms();
-      const symptomTags = symptoms.split(' ').map((symptom) => `#${symptom}`);
-      const tagsWithSynonyms = [...symptomTags, ...synonyms];
-      setTags(tagsWithSynonyms);
-    } catch (error) {
-      console.error(error);
-      // Handle error if API request fails
-    }
+    const synonyms: any = await fetchSynonyms();
+
+    // Handle error if API request fails
   };
 
   const convertTextToSinhala = (text: any) => {
@@ -90,11 +84,29 @@ const DiseasePrediction = () => {
   };
 
   Voice.onSpeechResults = (event: any) => {
+    console.log(event.value[0]);
     setRecognizedText(event.value[0]);
   };
 
   const clearTextInput = () => {
     setRecognizedText('');
+  };
+  const renderTag = ({item}: {item: string}) => {
+    return (
+      <View
+        style={{
+          backgroundColor: '#666967',
+          borderRadius: 5,
+          paddingHorizontal: 10,
+          paddingVertical: 5,
+          margin: 2,
+          flex: 1,
+        }}>
+        <Text color={colors.card} numberOfLines={1} ellipsizeMode="tail">
+          {item}
+        </Text>
+      </View>
+    );
   };
 
   return (
@@ -152,13 +164,7 @@ const DiseasePrediction = () => {
             value={isRecording ? '' : recognizedText} // Use the converted text when not recording
             onChangeText={(text) => {
               let convertedText = text;
-              if (isDark) {
-                // Convert text to Sinhala
-                convertedText = singlishToUnicode(text);
-              } else {
-                // Convert text to English
-                convertedText = unicodeToDlManel(text);
-              }
+
               setRecognizedText(convertedText);
               setSymptoms(text);
             }}
@@ -171,7 +177,7 @@ const DiseasePrediction = () => {
 
           <TouchableOpacity onPress={clearTextInput}>
             <Image
-              source={assets.dustbin}
+              source={assets?.dustbin}
               style={{
                 width: 60,
                 height: 60,
@@ -181,29 +187,14 @@ const DiseasePrediction = () => {
         </Block>
 
         <Block row flex={0} color={colors.card} paddingBottom={sizes.sm}>
-          <View
-            style={{
-              backgroundColor: '#666967',
-              borderRadius: 5,
-              paddingHorizontal: 10,
-              paddingVertical: 5,
-              margin: 2,
-            }}>
-            {tags.map((tag, index) => (
-              <Text color={colors.card}>
-                {tag}
-                Facebook
-                <TouchableOpacity>
-                  <Image
-                    source={assets.close}
-                    color={colors.card}
-                    radius={0}
-                    style={{height: 10, width: 10}}
-                  />
-                </TouchableOpacity>
-              </Text>
-            ))}
-          </View>
+          <FlatList
+            data={tags}
+            renderItem={renderTag}
+            keyExtractor={(item: any, index: any) => index.toString()}
+            numColumns={3}
+            contentContainerStyle={{padding: sizes.padding}}
+            style={{flex: 1}}
+          />
         </Block>
 
         <Block
@@ -214,7 +205,7 @@ const DiseasePrediction = () => {
           <TouchableOpacity
             onPress={isRecording ? onStopRecording : onStartRecording}>
             <Image
-              source={assets.mic}
+              source={assets?.mic}
               style={{
                 width: 80,
                 height: 80,
@@ -259,7 +250,9 @@ const DiseasePrediction = () => {
           paddingBottom={sizes.sm}
           color={colors.card}>
           <TouchableOpacity
-            onPress={() => navigation.navigate('Update')}
+            onPress={() =>
+              navigation.navigate('Update', {text: symptoms, tags: tags})
+            }
             style={{
               alignItems: 'center',
               justifyContent: 'center',

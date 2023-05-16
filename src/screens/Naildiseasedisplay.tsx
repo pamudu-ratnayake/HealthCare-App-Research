@@ -29,7 +29,7 @@ const Naildiseasedisplay = ({route}) => {
         Your disease might be...
       </Text>
       <Text h5 marginBottom={sizes.m}>
-        with the accuracy level of {diseaseData && diseaseData.accuracy.toFixed(0)}%
+        with the probability of {diseaseData && diseaseData.accuracy?.toFixed(0)}%
       </Text>
       <View style={{height: 550}}>
         <Block card padding={0} marginTop={sizes.sm}>

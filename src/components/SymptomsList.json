@@ -1,0 +1,66 @@
+[
+
+
+    {
+        "id": 0,
+        "name": "\"Allergy\"",
+        "symptom": "Tingling in the mouth, Swelling of the lips, face or tongue, Hives, Itchy skin, Rashes or hives, Wheezing, Swelling of the face, Swelling at the site , Itching or hives, Cough, wheezing, shortness of breath.",
+        "precuation": "For children, don’t allow stuffed animals in the bed—they trap dust and other allergens. Try to avoid carpet and rugs at home—they hold onto allergens; if you have carpet, vacuum as often as possible.Clean your air conditioning filters regularly—your filter traps many of the allergy-causing fibers, pollens, dust, and more that can lead to allergic reactions.Keep an allergy diary—record what causes or increases your symptoms; track the foods you eat and activities you do to look for triggers; also record what seems to help and share that information with your doctor.",
+        "description":"Some substances we live with every day like pollen, dust, or peanuts may not bother most people, but your immune system might mistake them for something harmful and go into overdrive, producing antibodies to fight that allergen. Common allergens include mold spores, pet dander, insect stings, foods, certain types of medicine, and more.",
+        "Medicine_Name": "Diphenhydramine,Chlorpheniramine, Azelastine (Astelin, Astepro), Olopatadine (Patanase),Ketotifen (Alaway, Zaditor), Olopatadine (Pataday, Patanol, Pazeo), Pheniramine and naphazoline (Visine, Opcon-A, others).",
+        "image": "https://img.freepik.com/free-vector/allergy-concept-with-symptoms-treatment-common-allergens-symbols-cartoon_1284-55530.jpg?w=740&t=st=1684246349~exp=1684246949~hmac=a6174a02d1b74f8509d801641cb239e06167049ee6f49d338933172b93f9d806"
+    },
+
+
+ 
+    {
+        "id": 1,
+        "name": "\"Common Cold\"",
+        "symptom": "Runny or stuffy nose, store throat, cough, congestion, sneezing, generally feeling unwell.",
+        "precuation": "1.Hold in the mouth with warm water that is mixed with half a teaspoon of lemon juice and honey.  it should be sure that the water is not too hot, which can lead to burns. \n 2.Tea with lemon and honey and other hot drinks may help break up congestion and ease a sore throat.Hot soup, especially spicy soups, may promote nasal drainage and make breathing easier. \n 3. Breathing in steam from a hot may decrease nasal congestion and sinus pressure temporarily. An alternative to a hot steam is filling a pot with boiling water, cover the head using a towel and breathing in the steam. \n 4.  blow the nose correctly, you should block one nostril and gently blow into a tissue paper, then switch and block the opposite nostril and blow.",
+        "description":"The common cold is a viral infection of your nose and throat (upper respiratory tract). It's usually harmless, although it might not feel that way. Many types of viruses can cause a common cold.",
+        "Medicine_Name": "Paracetamol , Ibuprofen , Decongestants and saline nasal sprays or drops to relieve a blocked nose.",
+        "image": "https://img.freepik.com/free-vector/young-man-having-cold_23-2148484108.jpg?w=740&t=st=1684259292~exp=1684259892~hmac=d8711dfa427b4b9597fd8d2e44f6787f7571645d5d7fdb027195b64c68e41877"
+    },
+
+ 
+
+ 
+
+    {
+        "id": 2,
+        "name": "\"Gastroenteritis\"",
+        "symptom": "Watery, usually nonbloody diarrhea — bloody diarrhea usually means you have a different, more severe infection, Nausea, vomiting or both, Stomach cramps and pain, Occasional muscle aches or headach.",
+        "precuation": "Washing our hand with soap everyday. do not eat fast food. Eat home made food. if someone has stomach flu in your house stay away from him and don't use his things. Don't drink tap water.Don't eat road food.",
+        "description":"Gastroenteritis is an uncomfortable and inconvenient ailment, but is rarely life-threatening in the United States and other developed nations. Viral gastroenteritis is frequently referred to as the stomach or intestinal flu, although the influenza virus is not associated with this illness.",
+        "Medicine_Name": "ondansetron, doxycycline, ceftriaxone, Vibramycin,  Doxy 100, ampicillin, Morgidox.",
+        "image": "https://img.freepik.com/premium-photo/woman-touching-stomach-painful-suffering-from-stomachache-causes-menstruation-period-gastric_34200-643.jpg?w=1380"
+    },
+
+
+
+
+    {
+        "id": 3,
+        "name": "\"Migraine\"",
+        "symptom": "Being sensitive to light, sound, or smell, Fatigue, Food cravings or lack of appetite, Mood changes,Severe thirst.",
+        "precuation": "1. Turn off the lights. Light and sound can make migraine pain worse. Relax in a dark, quiet room. Sleep if you can. \n 2. Try temperature therapy. Apply hot or cold compresses to your head or neck. Ice packs have a numbing effect, which may dull the pain. Hot packs and heating pads can relax tense muscles. Warm showers or baths may have a similar effect, \n 3. Sip a caffeinated drink. In small amounts, caffeine alone can relieve migraine pain in the early stages. Caffeine also may enhance the pain-reducing effects of acetaminophen (Tylenol, others) and aspirin. \n 4. Establish regular sleep hours. Wake up and go to bed at the same time every day — even on weekends. If you nap during the day, keep it short. Naps longer than 20 to 30 minutes may interfere with nighttime sleep. \n 4. Establish regular sleep hours. Wake up and go to bed at the same time every day — even on weekends. If you nap during the day, keep it short.(20 - 30 minutes)",
+        "description":"Migraine is a neurologic disorder that often causes a strong headache. The headache comes in episodes and sometimes also comes with nausea, vomiting, and sensitivity to light.",
+        "Medicine_Name": "Almotriptan (Axert), Eletriptan (Relpax), Frovatriptan (Frova), Naratriptan (Amerge), Rizatriptan (Maxalt),Sumatriptan (Alsuma, Imitrex, Onzetra, Sumavel, Zembrace),Zolmitriptan (Zomig).",
+        "image": "https://img.freepik.com/free-vector/man-showing-symptoms-virus-vector_53876-169033.jpg?w=740&t=st=1684259464~exp=1684260064~hmac=c22a87aac3790809e1b729cb158f378db31e746ab97d528ef7220fd55f1a716a"
+        
+    },
+ 
+   
+   
+    {
+        "id": 4,
+        "name": "\"Urinary tract infection\"",
+        "symptom": "A strong urge to urinate that doesn't go away,A burning feeling when urinating,Urinating often, and passing small amounts of urine.",
+        "precuation": "1. Drink lots of water to help flush the bacteria from your body. Your doctor may also give you a medication to soothe pain. You might find a heating pad helpful. Cranberry juice is often promoted to prevent or treat UTIs. \n 2. Empty your bladder often as soon as you feel the need to pee; don't rush, and be sure you've emptied your bladder completely.",
+        "description":"A urinary tract infection (UTI) is an infection in any part of the urinary system. The urinary system includes the kidneys, ureters, bladder and urethra. Most infections involve the lower urinary tract — the bladder and the urethra.",
+        "Medicine_Name": "homeaPet, uralix, amoxicillin.",
+        "image": "https://img.freepik.com/premium-photo/young-man-holding-his-crotch-tissue-paper-suffer-from-diarrhea-incontinence-prostatitis-venereal_59017-1065.jpg?w=1380"
+    }
+
+]

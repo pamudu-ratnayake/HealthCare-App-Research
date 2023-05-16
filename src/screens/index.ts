@@ -19,3 +19,8 @@ export {default as Shopping} from './Pro';
 export {default as Pro} from './Pro';
 export {default as NailIdentification} from './NailIdentification';
 export {default as Naildiseasedisplay} from './Naildiseasedisplay';
+export {default as firstaid} from './firstaid';
+export {default as SelectSymtom} from './SelectSymtom';
+export {default as SelectSymptomSinhala} from './SelectSymptomSinhala';
+export {default as Predict} from './Predict';
+export {default as PredictSinhala} from './PredictSinhala';

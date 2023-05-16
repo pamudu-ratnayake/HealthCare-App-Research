@@ -97,11 +97,11 @@ const NailIdentification = () => {
   return (
     <Block marginTop={sizes.m} paddingHorizontal={sizes.padding}>
       <Text h4 marginBottom={sizes.m}>
-        Upload your photo here...
+        Nail Disease Identification
       </Text>
       {/* onPress={handleChoosePhoto} */}
       {/* <TouchableOpacity > */}
-      <View style={{height: 500, marginTop: 40}}>
+      <View style={{height: 500, marginTop: 30}}>
         <Block card>
           {image && (
             <Image

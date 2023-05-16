@@ -107,32 +107,12 @@ const AcnePrediction = () => {
         </View>
       ) : (
         <ScrollView>
-          <TouchableHighlight
-            style={{
-              marginRight: 20,
-              marginLeft: 20,
-              marginTop: 0,
-              paddingTop: 10,
-              paddingBottom: 10,
-              borderRadius: 10,
-              borderWidth: 2,
-              borderColor: '#797878',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-            onPress={() => {}}
-            underlayColor="#fff">
-            <Text
-              style={{
-                fontFamily: 'Poppins',
-                fontStyle: 'normal',
-                fontWeight: '600',
-                fontSize: 23,
-                color: '#000000',
-              }}>
-              Acne Prediction
-            </Text>
-          </TouchableHighlight>
+          <Text2 h4 marginBottom={sizes.m}>
+            Acne Identification
+          </Text2>
+          {/* <Text >
+            
+          </Text> */}
           {/* <View
           style={{
             marginTop: 55,

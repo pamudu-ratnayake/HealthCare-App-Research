@@ -1,7 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {Articles, Components, Home, Profile, Register, Pro, NailIdentification, Naildiseasedisplay} from '../screens';
+import {Articles, Components, Home, Profile, Register, Pro, NailIdentification, Naildiseasedisplay, firstaid, SelectSymtom, Predict, SelectSymptomSinhala, PredictSinhala} from '../screens';
 import {useScreenOptions, useTranslation} from '../hooks';
 import AcnePrediction from '../screens/AcnePrediction';
 import PredictionResult from '../screens/PredictionResult';
@@ -53,7 +53,35 @@ export default () => {
       />
 
       <Stack.Screen name="Pro" component={Pro} options={screenOptions.pro} />
+      <Stack.Screen
+        name="firstaid"
+        component={firstaid}
+        options={{title: t('navigation.firstaid')}}
+      />
 
+    <Stack.Screen
+        name="SelectSymtom"
+        component={SelectSymtom}
+        options={{title: t('navigation.symplist')}}
+      />
+
+<Stack.Screen
+        name="SelectSymtomSinhala"
+        component={SelectSymptomSinhala}
+        options={{title: t('navigation.symplist')}}
+      />
+
+    <Stack.Screen
+        name="Predict"
+        component={Predict}
+        options={{title: t('navigation.symplist')}}
+      />
+       <Stack.Screen
+        name="PredictSinhala"
+        component={PredictSinhala}
+        options={{title: t('navigation.symplist')}}
+      />
+      
       <Stack.Screen
         name="Profile"
         component={Profile}
