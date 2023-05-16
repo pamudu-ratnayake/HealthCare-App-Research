@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {MultipleSelectList} from 'react-native-dropdown-select-list';
 import {useNavigation} from '@react-navigation/native';
 
@@ -14,8 +14,9 @@ import {
   Product,
   Text,
 } from '../components';
+import axios from 'axios';
 
-const Update = () => {
+const Update = ({route}: any) => {
   const {t} = useTranslation();
   const [tab, setTab] = useState<number>(0);
   const {following, trending} = useData();
@@ -24,6 +25,30 @@ const Update = () => {
   const {assets, colors, fonts, gradients, sizes} = useTheme();
   const [selected, setSelected] = React.useState([]);
   const navigation = useNavigation();
+  const {text, tags} = route.params;
+
+  const [availableData, setAvailableData] = useState<any>([]);
+
+  const apiEndpoint = 'https://backend-ap.herokuapp.com/app/predict';
+  const fetchPrediction = async () => {
+    console.log(text, selected);
+
+    const response = await axios
+      .post(apiEndpoint, {
+        text: text,
+        symptoms: JSON.stringify([...tags, ...selected]),
+      })
+      .then((response) => {
+        console.log(response.data);
+        navigation.navigate('Report', {
+          data: response.data,
+          tags: [...tags, ...selected],
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   const data = [
     {key: '1', value: 'COUGH'},
@@ -59,6 +84,10 @@ const Update = () => {
     {key: '31', value: 'RED_SPOTS_OVER_BODY'},
   ];
 
+  useEffect(() => {
+    setAvailableData(data?.filter((item: any) => !tags.includes(item.value)));
+  }, [tags]);
+  console.log('available', availableData);
   const handleProducts = useCallback(
     (tab: number) => {
       setTab(tab);
@@ -90,8 +119,8 @@ const Update = () => {
               paddingRight: 40,
             }}>
             <MultipleSelectList
-              setSelected={(val) => setSelected(val)}
-              data={data}
+              setSelected={(val: any) => setSelected(val)}
+              data={availableData}
               save="value"
               label="Categories"
               placeholder="Please select less than 15"
@@ -107,7 +136,9 @@ const Update = () => {
           paddingBottom={sizes.sm}
           color={colors.card}>
           <TouchableOpacity
-            onPress={() => navigation.navigate('Report')}
+            onPress={() => {
+              fetchPrediction();
+            }}
             style={{
               alignItems: 'center',
               justifyContent: 'center',
