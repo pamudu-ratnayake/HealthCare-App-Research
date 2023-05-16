@@ -32,6 +32,35 @@ const NailIdentification = () => {
     }
   };
 
+  async function pickImageFromCamera() {
+    console.log('pickImageFromCamera');
+    try {
+      const status = await ImagePicker.requestCameraPermissionsAsync();
+      console.log(status);
+      if (!status.granted) {
+        return;
+      }
+      // let result = await ImagePicker.launchCameraAsync({
+      //   mediaTypes: ImagePicker.MediaTypeOptions.All,
+      //   aspect: [4, 3],
+      //   quality: 1,
+      // });
+      let result = await ImagePicker.launchCameraAsync({
+        mediaTypes: ImagePicker.MediaTypeOptions.All,
+        allowsEditing: true,
+        aspect: [4, 3],
+        quality: 1,
+      });
+
+      if (result?.cancelled == false) {
+        // setSubmitError(null);
+        setImage(result.uri);
+      }
+    } catch (error) {
+      console.log('pickImageFromCamera', error);
+    }
+  }
+
   const predictDisease = () => {
     console.log('button pressed');
 
@@ -87,17 +116,28 @@ const NailIdentification = () => {
             />
           )}
           <View
-            style={{height: 50, width: 200, marginLeft: 75, marginTop: 110}}>
+            style={{height: 50, width: 200, marginLeft: 75, marginTop: 80}}>
             {!image && (
-              <Button
-              flex={1}
-              gradient={gradients.success}
-              marginBottom={sizes.base}
-              onPress={pickImage}>
-              <Text white bold transform="uppercase">
-                Upload Photo
-              </Text>
-            </Button>
+              <Block>
+                <Button
+                flex={1}
+                gradient={gradients.success}
+                marginBottom={sizes.base}
+                onPress={pickImageFromCamera}>
+                <Text white bold transform="uppercase">
+                  Take Photo
+                </Text>
+                </Button>
+                <Button
+                flex={1}
+                gradient={gradients.success}
+                marginBottom={sizes.base}
+                onPress={pickImage}>
+                <Text white bold transform="uppercase">
+                  Upload Photo
+                </Text>
+                </Button>
+              </Block>
             )}
             {image && (
               <Block row>

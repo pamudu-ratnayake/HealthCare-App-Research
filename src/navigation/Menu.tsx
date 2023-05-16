@@ -98,6 +98,16 @@ const DrawerContent = (
       icon: assets.document,
     },
     // {name: t('screens.rental'), to: 'Pro', icon: assets.rental},
+    {
+      name: t('screens.acne_prediction'),
+      to: 'AcnePrediction',
+      icon: assets.rental,
+    },
+    {
+      name: t('screens.diseaseprediction'),
+      to: 'Diseaseprediction',
+      icon: assets.document,
+    },
     {name: t('screens.profile'), to: 'Profile', icon: assets.profile},
     {name: t('screens.settings'), to: 'Pro', icon: assets.settings},
     {name: t('screens.register'), to: 'Register', icon: assets.register},

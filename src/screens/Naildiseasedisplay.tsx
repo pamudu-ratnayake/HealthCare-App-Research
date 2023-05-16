@@ -8,7 +8,7 @@ import bg2 from '../assets/images/bg2.jpg'
 
 const Naildiseasedisplay = ({route}) => {
   const navigation = useNavigation();
-  const {assets, colors, gradients, sizes} = useTheme();
+  const {sizes} = useTheme();
   const [diseaseData, setDiseaseData] = useState({});
   const [diseaseSteps, setDiseaseSteps] = useState([]);
 
@@ -29,7 +29,7 @@ const Naildiseasedisplay = ({route}) => {
         Your disease might be...
       </Text>
       <Text h5 marginBottom={sizes.m}>
-        with the accuracy level of 80%
+        with the accuracy level of {diseaseData && diseaseData.accuracy.toFixed(0)}%
       </Text>
       <View style={{height: 550}}>
         <Block card padding={0} marginTop={sizes.sm}>

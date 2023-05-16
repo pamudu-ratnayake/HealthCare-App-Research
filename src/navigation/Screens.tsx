@@ -12,6 +12,8 @@ import {
   Naildiseasedisplay,
 } from '../screens';
 import {useScreenOptions, useTranslation} from '../hooks';
+import AcnePrediction from '../screens/AcnePrediction';
+import PredictionResult from '../screens/PredictionResult';
 import DiseasePrediction from '../screens/DiseasePrediction';
 import Update from '../screens/Update';
 import Report from '../screens/Report';
@@ -73,8 +75,20 @@ export default () => {
         options={{headerShown: false}}
       />
       <Stack.Screen name="Report" component={Report} />
-
+      
       <Stack.Screen name="Update" component={Update} />
+      
+      <Stack.Screen
+        name="AcnePrediction"
+        component={AcnePrediction}
+        options={{headerShown: true}}
+      />
+
+      <Stack.Screen
+        name="PredictionResult"
+        component={PredictionResult}
+        options={{headerShown: false}}
+      />
     </Stack.Navigator>
   );
 };
