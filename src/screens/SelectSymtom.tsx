@@ -79,7 +79,7 @@ const SelectSymtom = ({navigation}: {navigation: any}) => {
 const styles = StyleSheet.create({
   container:{
     marginLeft: 20,
-    marginTop: 8,
+    marginTop: 30,
   },
   notificationTextStyle:{
     marginLeft:20,
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 8,
     marginHorizontal: 110,
-    marginTop: 5,
+    marginTop: 30,
     marginBottom: 15,
   },
   buttonTextStyle:{
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
   },
   imgStyle:{
     width: '95%', 
-    height: 200, 
+    height: 230, 
     borderWidth: 1,
     borderColor: 'green',
     borderRadius: 20

@@ -49,9 +49,9 @@
     }
   },
   "app": {
-    "name": "Soft UI",
+    "name": "Fit Care",
     "fullname": "Soft UI Kit",
-    "native": "React Native",
+    "native": "",
     "link": "creative-tim.com"
   },
   "darkMode": "Dark Mode",
@@ -59,8 +59,8 @@
     "home": "Home",
     "components": "Components",
     "articles": "Articles",
-    "nailidentification": "Nail Identification",
-    "diseaseprediction": "Disease Prediction",
+    "nailidentification": "Nail Diseases",
+    "diseaseprediction": "General Diseases",
     "firstaid": "First Aid",
     "symplist": "Select Symptom",
     "rental": "Rental",
@@ -68,10 +68,10 @@
     "settings": "Settings",
     "register": "Create account",
     "extra": "Extra - Automotive",
-    "acne_prediction": "Acne Prediction"
+    "acne_prediction": "Skin Diseases"
   },
   "navigation": {
-    "home": "Soft UI",
+    "home": "Fit Care",
     "components": "Components",
     "articles": "Soft UI",
     "nailidentification": "Nail Identification",
@@ -99,7 +99,7 @@
     "documentation": "Documentation"
   },
   "home": {
-    "title": "Soft UI",
+    "title": "Fit Care",
     "following": "Following",
     "trending": "Trending"
   },

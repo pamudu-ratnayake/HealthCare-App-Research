@@ -135,7 +135,7 @@ const Report = ({route}: any) => {
           paddingBottom={sizes.sm}
           color={colors.card}>
           <Button
-            gradient={gradients.success}
+            gradient={gradients.secondary}
             onPress={() => navigation.goBack()}>
             <Text white h5 marginHorizontal={sizes.l}>
               Back

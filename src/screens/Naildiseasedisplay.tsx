@@ -4,7 +4,7 @@ import {useNavigation} from '@react-navigation/core';
 
 import {useData, useTheme} from '../hooks/';
 import {Block, Button, Input, Image, Switch, Modal, Text} from '../components/';
-import bg2 from '../assets/images/bg2.jpg'
+import bg2 from '../assets/images/background.png'
 
 const Naildiseasedisplay = ({route}) => {
   const navigation = useNavigation();
@@ -25,7 +25,7 @@ const Naildiseasedisplay = ({route}) => {
 
   return (
     <Block marginTop={sizes.m} paddingHorizontal={sizes.padding}>
-      <Text h4 marginBottom={sizes.m}>
+      <Text h4 marginBottom={sizes.s}>
         Your disease might be...
       </Text>
       <Text h5 marginBottom={sizes.m}>
@@ -48,12 +48,12 @@ const Naildiseasedisplay = ({route}) => {
                 {diseaseData && diseaseData.disease}
               </Text>
               <ScrollView>
-                <Text p black>
+                <Text p white>
                   {diseaseData && diseaseData.description}
                 </Text>
                 {diseaseData.steps &&
                   diseaseData.steps.map((step, index) => (
-                    <Text key={index} p black style={{
+                    <Text key={index} p white style={{
                       marginLeft: 20,
                       marginBottom: 10,
                       marginTop: 10

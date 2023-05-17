@@ -12,9 +12,9 @@
   "dependencies": {
     "@react-native-async-storage/async-storage": "1.17.3",
     "@react-native-community/masked-view": "0.1.10",
-    "@react-native-voice/voice": "^3.2.4",
     "@react-native-community/netinfo": "9.3.7",
     "@react-native-picker/picker": "2.4.8",
+    "@react-native-voice/voice": "^3.2.4",
     "@react-navigation/drawer": "5.12.5",
     "@react-navigation/native": "5.9.4",
     "@react-navigation/stack": "5.14.5",
@@ -30,6 +30,7 @@
     "expo-linear-gradient": "~11.4.0",
     "expo-localization": "~13.1.0",
     "expo-modules-core": "~0.11.10",
+    "expo-permissions": "^14.1.1",
     "expo-status-bar": "~1.4.0",
     "i18n-js": "3.8.0",
     "react": "18.0.0",
@@ -46,10 +47,9 @@
     "react-native-tts": "^4.1.0",
     "react-native-vector-icons": "^9.2.0",
     "react-native-web": "~0.18.7",
-    "uglify-es": "3.2.2",
     "sinhala-unicode-coverter": "^1.0.2",
-    "translate-google-api": "^1.0.4"
-    
+    "translate-google-api": "^1.0.4",
+    "uglify-es": "3.2.2"
   },
   "devDependencies": {
     "@babel/core": "7.12.9",

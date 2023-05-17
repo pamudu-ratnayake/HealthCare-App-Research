@@ -107,7 +107,7 @@ const AcnePrediction = () => {
         </View>
       ) : (
         <ScrollView>
-          <Text2 h4 marginBottom={sizes.m}>
+          <Text2 h4 marginLeft={sizes.m} marginBottom={sizes.m}>
             Acne Identification
           </Text2>
           {/* <Text >
@@ -356,7 +356,7 @@ const AcnePrediction = () => {
                 });
                 axios
                   .post(
-                    'http://192.168.1.4:8002/app/image', //HERE CHANGE API URL
+                    'http://192.168.43.245:8002/app/image', //HERE CHANGE API URL
                     data,
                     {
                       headers: {
@@ -386,7 +386,7 @@ const AcnePrediction = () => {
               }}
               width={'100%'}
               flex={1}
-              gradient={gradients.dark}
+              gradient={gradients.primary}
               // marginBottom={sizes.base}
             >
               <Text2 white bold transform="uppercase">
@@ -424,7 +424,7 @@ const AcnePrediction = () => {
               }}
               width={'100%'}
               flex={1}
-              gradient={gradients.dark}
+              gradient={gradients.secondary}
               // marginBottom={sizes.base}
             >
               <Text2 white bold transform="uppercase">

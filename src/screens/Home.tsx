@@ -52,7 +52,7 @@ const Home = () => {
                     opacity: 0.5
                   }}>
                 </Image>
-                <Text h3 style={{marginTop: -40, textAlign: 'center'}}>Disease Prediction</Text>
+                <Text h3 style={{marginTop: -40, textAlign: 'center'}}>General Diseases</Text>
               </View>
             </Block>
           </View>
@@ -72,7 +72,7 @@ const Home = () => {
                   opacity: 0.5
                 }}>
               </Image>
-              <Text h3 style={{marginTop: -40, textAlign: 'center'}}>Nail Disease Identify</Text>
+              <Text h3 style={{marginTop: -40, textAlign: 'center'}}>Nail Diseases</Text>
             </View>
           </Block>
         </View>
@@ -91,7 +91,7 @@ const Home = () => {
                   opacity: 0.5
                 }}>
               </Image>
-              <Text h3 style={{marginTop: -40, textAlign: 'center'}}>Skin Disease Identify</Text>
+              <Text h3 style={{marginTop: -40, textAlign: 'center'}}>Skin Diseases</Text>
             </View>
           </Block>
         </View>

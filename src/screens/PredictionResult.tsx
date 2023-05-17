@@ -6,14 +6,14 @@ import {
   ScrollView,
   Text,
   View,
-  Image,
   Pressable,
 } from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {useNavigation} from '@react-navigation/core';
-import {Button, Text as Text2} from '../components/';
+import {Block, Button, Text as Text2, Image} from '../components/';
 import {useTheme} from '../hooks/';
+import bg2 from '../assets/images/background.png'
 
 const isAndroid = Platform.OS === 'android';
 
@@ -24,34 +24,24 @@ const PredictionResult = ({route, navigation}) => {
 
   return (
     <SafeAreaView>
-      <ScrollView>
-        <TouchableHighlight
-          style={{
-            marginRight: 20,
-            marginLeft: 20,
-            marginTop: 10,
-            paddingTop: 20,
-            paddingBottom: 20,
-            borderRadius: 10,
-            borderWidth: 2,
-            borderColor: '#797878',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-          onPress={() => {}}
-          underlayColor="#fff">
-          <Text
+      {/* <Block card padding={0} marginTop={sizes.sm}></Block> */}
+      <Image
+            background
+            resizeMode="cover"
+            source={bg2}
+            // radius={sizes.cardRadius}
             style={{
-              fontFamily: 'Poppins',
-              fontStyle: 'normal',
-              fontWeight: '600',
-              fontSize: 23,
-              color: '#000000',
+              // width: '100%',
+              height: 150,
+              // borderRadius: sizes.s,
             }}>
-            Prediction
-          </Text>
-        </TouchableHighlight>
-        <View style={{marginTop: 50}}></View>
+      <Text2 h2 white marginTop={sizes.l} marginLeft={sizes.m} marginBottom={sizes.m}>
+        Prediction
+      </Text2>
+
+            </Image>
+          {/* </Block> */}
+      <ScrollView style={{height:'100%'}}>
 
         <View
           style={{
@@ -132,38 +122,12 @@ const PredictionResult = ({route, navigation}) => {
               backgroundColor: '#ffffff',
               borderRadius: 20,
             }}>
-            <Text style={{textAlign: 'center'}}>
+            <Text style={{textAlign: 'justify'}}>
               {samplePred.acne_treatment}
             </Text>
           </View>
         </View>
 
-        <TouchableHighlight
-          style={{
-            marginRight: 20,
-            marginLeft: 20,
-            marginTop: 20,
-            paddingTop: 20,
-            paddingBottom: 20,
-            borderRadius: 10,
-            borderWidth: 2,
-            borderColor: '#797878',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-          onPress={() => {}}
-          underlayColor="#fff">
-          <Text
-            style={{
-              fontFamily: 'Poppins',
-              fontStyle: 'normal',
-              fontWeight: '600',
-              fontSize: 23,
-              color: '#000000',
-            }}>
-            Treatment
-          </Text>
-        </TouchableHighlight>
         <View style={{marginTop: 50}}></View>
 
         <View
@@ -243,7 +207,7 @@ const PredictionResult = ({route, navigation}) => {
               backgroundColor: '#ffffff',
               borderRadius: 20,
             }}>
-            <Text style={{textAlign: 'center'}}>
+            <Text style={{textAlign: 'justify'}}>
               {samplePred.skin_treatment}
             </Text>
           </View>
@@ -295,7 +259,7 @@ const PredictionResult = ({route, navigation}) => {
             }}
             width={'100%'}
             flex={1}
-            gradient={gradients.dark}
+            gradient={gradients.secondary}
             // marginBottom={sizes.base}
           >
             <Text2 white bold transform="uppercase">

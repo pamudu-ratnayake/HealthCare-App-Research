@@ -145,9 +145,9 @@ const Update = ({route}: any) => {
               paddingVertical: 12,
               paddingHorizontal: 40,
               borderRadius: 40,
-              backgroundColor: 'red',
+              backgroundColor: 'purple',
               borderWidth: 1,
-              borderColor: 'red',
+              borderColor: 'purple',
               elevation: 5, // Add elevation for shadow effect
             }}>
             <Text h5 white marginHorizontal={sizes.s}>
@@ -170,9 +170,9 @@ const Update = ({route}: any) => {
               paddingVertical: 12,
               paddingHorizontal: 40,
               borderRadius: 40,
-              backgroundColor: 'green',
+              backgroundColor: 'grey',
               borderWidth: 1,
-              borderColor: 'green',
+              borderColor: 'grey',
               elevation: 5, // Add elevation for shadow effect
             }}>
             <Text h5 white marginHorizontal={sizes.s}>

@@ -71,7 +71,7 @@ const NailIdentification = () => {
     });
 
     axios
-      .post(`http://192.168.1.4:8001/disease`, formData, {
+      .post(`http://192.168.43.245:8001/disease`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -106,22 +106,22 @@ const NailIdentification = () => {
           {image && (
             <Image
               source={{uri: image}}
-              style={{width: 250, height: 250, marginTop: 40, marginLeft: 50}}
+              style={{width: 250, height: 250, marginTop: 40, marginLeft: 30}}
             />
           )}
           {!image && (
             <Image
               source={uploadPhoto}
-              style={{width: 250, height: 250, marginTop: 40, marginLeft: 50}}
+              style={{width: 250, height: 250, marginTop: 40, marginLeft: 30}}
             />
           )}
           <View
-            style={{height: 50, width: 200, marginLeft: 75, marginTop: 80}}>
+            style={{height: 50, width: 200, marginLeft: 55, marginTop: 80}}>
             {!image && (
               <Block>
                 <Button
                 flex={1}
-                gradient={gradients.success}
+                gradient={gradients.primary}
                 marginBottom={sizes.base}
                 onPress={pickImageFromCamera}>
                 <Text white bold transform="uppercase">
@@ -130,7 +130,7 @@ const NailIdentification = () => {
                 </Button>
                 <Button
                 flex={1}
-                gradient={gradients.success}
+                gradient={gradients.primary}
                 marginBottom={sizes.base}
                 onPress={pickImage}>
                 <Text white bold transform="uppercase">
@@ -143,7 +143,7 @@ const NailIdentification = () => {
               <Block row>
                 <Button
                   flex={1}
-                  gradient={gradients.danger}
+                  gradient={gradients.secondary}
                   marginBottom={sizes.base}
                   onPress={cancelBtn}
                   style={{marginRight: 10}}>
@@ -153,7 +153,7 @@ const NailIdentification = () => {
                 </Button>
                 <Button
                   flex={1}
-                  gradient={gradients.success}
+                  gradient={gradients.primary}
                   marginBottom={sizes.base}
                   onPress={predictDisease}>
                   <Text white bold transform="uppercase">

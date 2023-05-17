@@ -114,23 +114,15 @@ const DrawerContent = (
       renderToHardwareTextureAndroid
       contentContainerStyle={{paddingBottom: sizes.padding}}>
       <Block paddingHorizontal={sizes.padding}>
-        <Block flex={0} row align="center" marginBottom={sizes.l}>
+        <Block row >
           <Image
             radius={0}
-            width={33}
-            height={33}
-            color={colors.text}
+            width={200}
+            height={200}
+            // color={colors.text}
             source={assets.logo}
             marginRight={sizes.sm}
           />
-          <Block>
-            <Text size={12} semibold>
-              {t('app.name')}
-            </Text>
-            <Text size={12} semibold>
-              {t('app.native')}
-            </Text>
-          </Block>
         </Block>
 
         {screens?.map((screen, index) => {

@@ -33,7 +33,7 @@ const Predict = ({ route }) => {
     };
 
 
-    axios.get(`http://192.168.1.4:8003/result/`, {
+    axios.get(`http://192.168.43.245:8003/result/`, {
       params: dataToSend,
       headers: {
         'Content-Type': 'application/json'
