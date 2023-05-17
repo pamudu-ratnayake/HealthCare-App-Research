@@ -236,7 +236,7 @@ const DiseasePrediction = () => {
           />
         </Block>
 
-        <Block row flex={0} color={colors.card} paddingRight={20}>
+        {/* <Block row flex={0} color={colors.card} paddingRight={20}>
           <View style={{flex: 1}} />
 
           <TouchableOpacity onPress={clearTextInput}>
@@ -248,7 +248,7 @@ const DiseasePrediction = () => {
               }}
             />
           </TouchableOpacity>
-        </Block>
+        </Block> */}
 
         <Block row flex={0} color={colors.card} paddingBottom={sizes.sm}>
         <FlatList
@@ -262,7 +262,7 @@ const DiseasePrediction = () => {
 
         </Block>
 
-        <Block
+        {/* <Block
           flex={0}
           color={colors.card}
           paddingBottom={sizes.sm}
@@ -281,7 +281,7 @@ const DiseasePrediction = () => {
           <Text p style={{marginBottom: 1}}>
             {isRecording ? 'Recording...' : 'start recording'}
           </Text>
-        </Block>
+        </Block> */}
 
         <Block
           row
@@ -303,20 +303,20 @@ const DiseasePrediction = () => {
               </Text>
             </Button> */}
           <TouchableOpacity
-            onPress={onSaveButtonPressed}
+            onPress={clearTextInput}
             style={{
               alignItems: 'center',
               justifyContent: 'center',
               paddingVertical: 12,
               paddingHorizontal: 40,
               borderRadius: 40,
-              backgroundColor: 'purple',
+              backgroundColor: 'grey',
               borderWidth: 1,
-              borderColor: 'purple',
+              borderColor: 'grey',
               elevation: 5, // Add elevation for shadow effect
             }}>
             <Text h5 white marginHorizontal={sizes.s}>
-              Save
+              Clear
             </Text>
           </TouchableOpacity>
         </Block>
@@ -335,9 +335,9 @@ const DiseasePrediction = () => {
               paddingVertical: 12,
               paddingHorizontal: 40,
               borderRadius: 40,
-              backgroundColor: 'grey',
+              backgroundColor: 'purple',
               borderWidth: 1,
-              borderColor: 'grey',
+              borderColor: 'purple',
               elevation: 5, // Add elevation for shadow effect
             }}>
             <Text h5 white marginHorizontal={sizes.s}>

@@ -41,7 +41,7 @@ const PredictionResult = ({route, navigation}) => {
 
             </Image>
           {/* </Block> */}
-      <ScrollView style={{height:'100%'}}>
+      <ScrollView style={{height:500}}>
 
         <View
           style={{
